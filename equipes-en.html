@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="F1 World - Discover all Formula 1 teams">
+  <title>F1 2025 Teams - F1 World</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🏁 F1 WORLD</div>
+    <nav>
+      <a href="index-en.html">Home</a>
+      <a href="equipes-en.html" class="active">Teams</a>
+      <a href="pilotes-en.html">Drivers</a>
+      <a href="media-en.html">Media</a>
+      <a href="contact-en.html">Contact</a>
+      <a href="equipes.html" class="lang-switcher">EN/FR</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Teams 2025</h1>
+      <p class="hero-subtitle">Discover the 10 Formula 1 teams</p>
+    </div>
+    <div class="hero-visual">
+      <div class="animated-bg"></div>
+    </div>
+  </section>
+
+  <!-- TEAMS SECTION -->
+  <section class="teams-section">
+    <div class="section-header">
+      <h2>Competing Teams</h2>
+      <p class="section-subtitle">The best teams in the Formula 1 world</p>
+    </div>
+
+    <!-- SEARCH BAR -->
+    <div class="search-container">
+      <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search for a team..." />
+      <span class="search-hint">Type a team name</span>
+    </div>
+
+    <div class="teams-grid" id="teamsGrid">
+
+      <div class="team-card" data-team="Red Bull Racing">
+        <div class="team-header">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#1e3ff2,#0066ff)">RB</div>
+          <div class="team-badge">🏆 Champion</div>
+        </div>
+        <div class="team-content">
+          <h3>Red Bull Racing</h3>
+          <p class="team-model">RB21</p>
+          <p class="team-description">Austrian dominant team with cutting-edge technology</p>
+          <button class="team-link" onclick="openModal('modal-redbull')">Learn more →</button>
+        </div>
+      </div>
+
+      <div class="team-card" data-team="Ferrari">
+        <div class="team-header">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#dc0000,#ff0000)">F</div>
+          <div class="team-badge">🇮🇹 Historic</div>
+        </div>
+        <div class="team-content">
+          <h3>Ferrari</h3>
+          <p class="team-model">SF-26</p>
+          <p class="team-description">The oldest Italian team in F1</p>
+          <button class="team-link" onclick="openModal('modal-ferrari')">Learn more →</button>
+        </div>
+      </div>
+
+      <div class="team-card" data-team="Mercedes-AMG Petronas">
+        <div class="team-header">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#00d4be,#00ffff)">M</div>
+          <div class="team-badge">⭐ Legend</div>
+        </div>
+        <div class="team-content">
+          <h3>Mercedes-AMG Petronas</h3>
+          <p class="team-model">W16</p>
+          <p class="team-description">Multi-world champion with an impressive track record</p>
+          <button class="team-link" onclick="openModal('modal-mercedes')">Learn more →</button>
+        </div>
+      </div>
+
+      <div class="team-card" data-team="McLaren">
+        <div class="team-header">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#ff8700,#ffaa00)">MC</div>
+          <div class="team-badge">🇬🇧 British</div>
+        </div>
+        <div class="team-content">
+          <h3>McLaren</h3>
+          <p class="team-model">MCL39</p>
+          <p class="team-description">Iconic British team with a rich history</p>
+          <button class="team-link" onclick="openModal('modal-mclaren')">Learn more →</button>
+        </div>
+      </div>
+
+      <div class="team-card" data-team="Aston Martin">
+        <div class="team-header">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#006f62,#00aa99)">AM</div>
+          <div class="team-badge">🚀 Ambitious</div>
+        </div>
+        <div class="team-content">
+          <h3>Aston Martin</h3>
+          <p class="team-model">AMR26</p>
+          <p class="team-description">Team with strong progression and high ambitions</p>
+          <button class="team-link" onclick="openModal('modal-astonmartin')">Learn more →</button>
+        </div>
+      </div>
+
+      <div class="team-card" data-team="Alpine">
+        <div class="team-header">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#0082fa,#0099ff)">A</div>
+          <div class="team-badge">🇫🇷 French</div>
+        </div>
+        <div class="team-content">
+          <h3>Alpine</h3>
+          <p class="team-model">A526</p>
+          <p class="team-description">French team of prestige and tradition</p>
+          <button class="team-link" onclick="openModal('modal-alpine')">Learn more →</button>
+        </div>
+      </div>
+
+      <div class="team-card" data-team="Williams Racing">
+        <div class="team-header">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#0082fa,#00c7ff)">W</div>
+          <div class="team-badge">📜 Historic</div>
+        </div>
+        <div class="team-content">
+          <h3>Williams Racing</h3>
+          <p class="team-model">FW47</p>
+          <p class="team-description">Historic and legendary Formula 1 team</p>
+          <button class="team-link" onclick="openModal('modal-williams')">Learn more →</button>
+        </div>
+      </div>
+
+      <div class="team-card" data-team="Racing Bulls">
+        <div class="team-header">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#2e7d32,#4caf50)">RBR</div>
+          <div class="team-badge">🔗 Junior Team</div>
+        </div>
+        <div class="team-content">
+          <h3>Racing Bulls</h3>
+          <p class="team-model">RB21</p>
+          <p class="team-description">Red Bull Racing sister team to develop talent</p>
+          <button class="team-link" onclick="openModal('modal-racingbulls')">Learn more →</button>
+        </div>
+      </div>
+
+      <div class="team-card" data-team="Sauber">
+        <div class="team-header">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#00204a,#003d7a)">S</div>
+          <div class="team-badge">🇨🇭 Swiss</div>
+        </div>
+        <div class="team-content">
+          <h3>Sauber</h3>
+          <p class="team-model">C45</p>
+          <p class="team-description">Swiss team of tradition and technical expertise</p>
+          <button class="team-link" onclick="openModal('modal-sauber')">Learn more →</button>
+        </div>
+      </div>
+
+      <div class="team-card" data-team="Haas F1 Team">
+        <div class="team-header">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#ffffff,#cccccc);color:#000;">H</div>
+          <div class="team-badge">🇺🇸 American</div>
+        </div>
+        <div class="team-content">
+          <h3>Haas F1 Team</h3>
+          <p class="team-model">VF-26</p>
+          <p class="team-description">Independent and competitive American team</p>
+          <button class="team-link" onclick="openModal('modal-haas')">Learn more →</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODALS -->
+  <div id="modal-redbull" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-redbull')">&times;</span>
+      <img src="LivreBR25.png" alt="Red Bull Racing">
+    </div>
+  </div>
+
+  <div id="modal-ferrari" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-ferrari')">&times;</span>
+      <img src="LivreFR25.png" alt="Ferrari">
+    </div>
+  </div>
+
+  <div id="modal-mercedes" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-mercedes')">&times;</span>
+      <img src="LivreMER25.jpeg" alt="Mercedes">
+    </div>
+  </div>
+
+  <div id="modal-mclaren" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-mclaren')">&times;</span>
+      <img src="LivreMC25.png" alt="McLaren">
+    </div>
+  </div>
+
+  <div id="modal-astonmartin" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-astonmartin')">&times;</span>
+      <img src="LivreAM25.jpg" alt="Aston Martin">
+    </div>
+  </div>
+
+  <div id="modal-alpine" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-alpine')">&times;</span>
+      <img src="LivreALP25.png" alt="Alpine">
+    </div>
+  </div>
+
+  <div id="modal-williams" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-williams')">&times;</span>
+      <img src="LivreW25.jpg" alt="Williams">
+    </div>
+  </div>
+
+  <div id="modal-racingbulls" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-racingbulls')">&times;</span>
+      <img src="LivreVR25.webp" alt="Racing Bulls">
+    </div>
+  </div>
+
+  <div id="modal-sauber" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-sauber')">&times;</span>
+      <img src="LivreSB25.jpg" alt="Sauber">
+    </div>
+  </div>
+
+  <div id="modal-haas" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-haas')">&times;</span>
+      <img src="LivreHAAS25.webp" alt="Haas">
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 F1 World - All rights reserved</p>
+    </div>
+    <img class="f1-car" src="https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg" alt="F1 Car">
+  </footer>
+
+</body>
+<script>
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.add('show');
+  }
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove('show');
+  }
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal')) {
+    event.target.classList.remove('show');
+  }
+}
+
+// Search functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('searchInput');
+  const teamCards = document.querySelectorAll('.team-card');
+  const teamsGrid = document.getElementById('teamsGrid');
+
+  searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    
+    teamCards.forEach(card => {
+      const teamName = card.dataset.team.toLowerCase();
+      if (teamName.includes(searchTerm)) {
+        card.style.display = 'block';
+        card.classList.add('visible');
+      } else {
+        card.style.display = 'none';
+        card.classList.remove('visible');
+      }
+    });
+  });
+
+  // Parallax effect with Intersection Observer
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  teamCards.forEach(card => {
+    observer.observe(card);
+  });
+});
+</script>
+</html>
