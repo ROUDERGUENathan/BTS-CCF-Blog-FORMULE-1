@@ -23,7 +23,6 @@ L’objectif du projet est de mettre en pratique :
 ## 🛠️ Technologies utilisées
 - **HTML**
 - **CSS**
-- **JavaScript**
 - **Git / GitHub**
 
 ---
