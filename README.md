@@ -34,7 +34,5 @@ BTS-CCF-Blog-FORMULE-1/
 ├── index.html
 ├── css/
 │   └── style.css
-├── js/
-│   └── script.js
 ├── images/
 └── README.md
